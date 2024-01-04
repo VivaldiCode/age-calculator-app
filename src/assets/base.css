@@ -1,0 +1,226 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+    --vt-c-white: #ffffff;
+    --vt-c-white-soft: #f8f8f8;
+    --vt-c-white-mute: #f2f2f2;
+
+    --vt-bg-app-calculator: #F0F0F0;
+    --vt-c-black: #181818;
+    --vt-c-black-soft: #222222;
+    --vt-c-black-mute: #282828;
+
+    --vt-c-indigo: #2c3e50;
+
+    --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+    --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+    --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+    --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+    --vt-c-text-light-1: var(--vt-c-indigo);
+    --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+    --vt-c-text-dark-1: var(--vt-c-white);
+    --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* semantic color variables for this project */
+:root {
+    --color-background: var(--vt-bg-app-calculator);
+    --color-background-soft: var(--vt-c-white-soft);
+    --color-background-mute: var(--vt-c-white-mute);
+
+    --color-border: var(--vt-c-divider-light-2);
+    --color-border-hover: var(--vt-c-divider-light-1);
+
+    --color-heading: var(--vt-c-text-light-1);
+    --color-text: var(--vt-c-text-light-1);
+
+    --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: var(--vt-bg-app-calculator);
+        --color-background-soft: var(--vt-c-black-soft);
+        --color-background-mute: var(--vt-c-black-mute);
+
+        --color-border: var(--vt-c-divider-dark-2);
+        --color-border-hover: var(--vt-c-divider-dark-1);
+
+        --color-heading: var(--vt-c-text-dark-1);
+        --color-text: var(--vt-c-text-dark-2);
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--color-text);
+    background: var(--vt-bg-app-calculator);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.wrapper {
+    width: 80vw;
+    min-height: 80vh;
+    padding: 40px;
+    margin: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+
+    order: 0;
+    border-radius: 3px;
+    -webkit-box-shadow: 10px 10px 49px -17px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 49px -17px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 49px -17px rgba(0, 0, 0, 0.75);
+}
+
+.form {
+    padding: 40px;
+    background: #FFF;
+    width: 80%;
+    border-radius: 20px 20px 100px 20px;
+}
+
+.form-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-input .input {
+    width: 30%;
+}
+
+.form-input .input span {
+    display: block;
+    margin-bottom: 6px;
+    color: hsl(0, 1%, 44%);
+}
+
+.form-input .input input {
+    width: 100%;
+    font-size: 32px;
+    border-radius: 5px;
+    border: solid 1px #c5c5c5;
+    padding: 15px;
+    color: hsl(0, 0%, 8%);
+    font-weight: bold;
+}
+
+.date-line * {
+    display: inline-block;
+}
+
+.number {
+    color: hsl(259, 100%, 65%);
+    font-size: 40px;
+}
+
+.text {
+    color: hsl(0, 0%, 8%);
+    margin-left: 10px;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.submit-form {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    height: 80px;
+}
+
+.submit-form:after {
+    content: '';
+    display: block;
+    margin-top: 19px;
+    border-bottom: 1px solid hsl(0, 0%, 86%);
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    top: -36px;
+}
+
+.button {
+    background-image: url("icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: hsl(259, 100%, 65%);
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    position: absolute;
+    z-index: 1;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-buttons * {
+    display: inline-block;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #app {
+        padding: 0 !important;
+    }
+
+    .wrapper {
+        width: 100vw;
+        margin: 0;
+        padding: 3rem 1rem 1rem 1rem;
+    }
+
+    .form {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .submit-form {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .submit-form:after {
+        top: -15px;
+    }
+
+    .button {
+        width: 60px;
+        height: 60px;
+        background-size: 50%;
+    }
+}
