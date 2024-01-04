@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 
 const start = new Date()
 const defaultForm = {
@@ -7,13 +7,6 @@ const defaultForm = {
   year: start.getFullYear()
 }
 
-const monthDiff = (d1, d2) => {
-  let months
-  months = (d2.getFullYear() - d1.getFullYear()) * 12
-  months -= d1.getMonth()
-  months += d2.getMonth()
-  return months <= 0 ? 0 : months
-}
 export default {
   emits: ['dateDone'],
   data() {

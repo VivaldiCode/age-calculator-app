@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import FormInputs from './FormInputs.vue'
 import AgeDisplay from './AgeDisplay.vue'
 </script>
