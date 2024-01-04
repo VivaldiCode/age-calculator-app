@@ -12,7 +12,7 @@ export default {
   data() {
     return {
       form: { ...defaultForm },
-      errors: {}
+      errors: {} as Record<string, string>
 
     }
   },
@@ -40,7 +40,7 @@ export default {
 
       // Additional validation logic if needed
       const endDate = new Date(this.form.year, this.form.month-1, this.form.day)
-      const diff = currentDate - endDate
+      const diff = currentDate.getTime() - endDate.getTime()
       const seconds = Math.floor(diff / 1000)
       const minutes = Math.floor(seconds / 60)
       const hours = Math.floor(minutes / 60)

@@ -3,7 +3,7 @@ import FormInputs from './FormInputs.vue'
 import AgeDisplay from './AgeDisplay.vue'
 </script>
 
-<script>
+<script lang="ts">
 
 const dateS = {
   days: 0,
@@ -20,7 +20,7 @@ export default {
     }
   },
   methods: {
-    onDateDone(value) {
+    onDateDone(value: { seconds: number; minutes: number; hours: number; days: number; month: number; year: number }) {
       this.date = value
     }
   }

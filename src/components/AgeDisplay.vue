@@ -13,11 +13,9 @@ const props = defineProps<{
 }>()
 
 const displaySeconds = ref<number>(0)
-const displayMinutes = ref<number>(0)
-const displayHours = ref<number>(0)
 const updateDisplayValues = () => {
   if (props.dates) {
-    displaySeconds.value = props.dates.seconds
+    displaySeconds.value = props.dates.seconds || 0
   }
 }
 
